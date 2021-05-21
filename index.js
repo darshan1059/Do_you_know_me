@@ -93,6 +93,7 @@ function highScore() {
   
   console.log("Hurraaay! You have made new highscore and ur score is: ", newHighScore);
   console.log("\n");
+  console.log("Kindly send me your highscore screenshot, so that i can update it on my database ");
   console.log("Thanks For Participating..!! ");
 
 }
