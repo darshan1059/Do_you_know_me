@@ -3,12 +3,12 @@ var score = 0;
 
 var highScores = [
   {
-    name: "Suresh",
+    name: "Akash",
     score: 3,
   },
 
   {
-    name: "Ramesh",
+    name: "Prakash",
     score: 1,
   },
 ]
@@ -17,24 +17,24 @@ var questions = [{
   question: "Where do i live ? ",
   answer: "Rajnandgaon"
 }, {
-  question: "Where do i work ? ",
+  question: "Where do i work earlier? ",
   answer: "Tcs"
 }, {
   question: "Do you know my favourite sport ? ",
   answer: "Basketball"
 }, {
-  question: "Do you know my favourite superhero ? ",
+  question: "Who is my favourite superhero ? ",
   answer: "Ironman"
 }, {
-  question: "Do you know my favourite dish ? ",
+  question: "What is my favourite dish ? ",
   answer: "paneerchilly"
 }
 ]
 
 function welcome() {
-  var userName = readlineSync.question("What's your name? ",{hideEchoBack: true});
+  var userName = readlineSync.question("What's your name? ");
 
-  console.log("Welcome " + userName +"!" + " Lets play quiz about Darshan? ");
+  console.log("Welcome " + userName +"!" + " Lets play quiz on Darshan? ");
   var userAns = readlineSync.question("Are you ready ? Enter yes or no: ");
   if (userAns === "yes") {
     game();
@@ -51,7 +51,7 @@ function play(question, answer) {
   var userAnswer = readlineSync.question(question);
 
   if (userAnswer.toUpperCase() === answer.toUpperCase()) {
-    console.log("Yor are right!");
+    console.log("You are right!");
     score = score + 1;
 
   } else {
@@ -77,7 +77,6 @@ function showScores() {
 function highScore() {
   var currentScore = score;
   for (var i = 0; i < highScores.length; i++) {
-    //console.log(currentScore> highScores[i].score);
     if (currentScore > highScores[i].score) {
       var newHighScore = currentScore;
 
@@ -93,7 +92,8 @@ function highScore() {
   
   console.log("Hurraaay! You have made new highscore and ur score is: ", newHighScore);
   console.log("\n");
-  console.log("Kindly send me your highscore screenshot, so that i can update it on my database ");
+  console.log("Kindly send me your highscore screenshot, so that i can update it on my database 👇");
+  highScores.map(score => console.log(score.name, " : ", score.score));
   console.log("Thanks For Participating..!! ");
 
 }
