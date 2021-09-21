@@ -1,4 +1,4 @@
-# Do_You_Know_Me
+# Do You Know Me
 This CLI app consists of a simple quiz on my personal life..!
 
 
